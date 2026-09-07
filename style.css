@@ -23,8 +23,8 @@ body {
     --padding-s: 5px;
     --padding-md: 10px;
     --padding-lg: 15px;
-    --pading-xl: 20px;
-    --pading-xxl: 30px;
+    --padding-xl: 20px;
+    --padding-xxl: 30px;
 
     --border-radius-sm: 5px;
     --border-radius-s: 10px;
@@ -35,6 +35,16 @@ body {
 body {
     background-color: var(--background-color);
     color: var(--primary-text-color);
+  
+
+}
+
+.modal .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(87, 82, 82, 0.272);
+    backdrop-filter: blur(5px);
 }
 
 main {
@@ -107,4 +117,49 @@ section .task-column .task {
 section .task-column .task button {
     align-self: flex-end;
     background-color: var(--bg-delete-color);
+}
+
+ .modal{
+position: fixed;
+height:100vh;
+width: 100vw;
+top: 0;
+left: 0;
+display: none;
+align-items: center;
+justify-content: center;
+
+}
+
+.modal.active{
+    display: flex;
+}
+
+.modal .center{
+    background-color: var(--bg-button-color);
+    padding: var(--padding-xxl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+    z-index: 10;
+    border-radius: var(--border-radius-md);
+}
+
+.modal .center input, .modal .center textarea{
+    background-color: var(--bg-task-color);
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    padding: var(--padding-lg) var(--padding-md);
+}
+
+.modal .center button{
+    background-color: var(--bg-task-color);
+    padding: var(--padding-md);
+    border-radius: var(--border-radius-s);
+    color: var(--primary-text-color);
+    border: none;
+    width: fit-content;
+    align-self: center;
 }

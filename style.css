@@ -22,7 +22,7 @@ body {
 
     /* color */
 
-    --primary-text-color: rgb(241, 225, 225);
+    --primary-text-color: rgb(253, 247, 247);
 
 
     /* padding variables */
@@ -98,6 +98,13 @@ section .task-column {
     flex-grow: 1;
     padding: var(--padding-md);
     border-radius: var(--border-radius-md);
+    transition: all 0.2s cubic-bezier(0.19,1,0.22,1);
+
+}
+
+section .task-column.hover-over{
+    border: 2px dashed var(--primary-text-color);
+    scale: 1.02;
 
 
 }
@@ -128,3 +135,4 @@ section .task-column .task button{
     background-color: var(--bg-delete-color);
    
 }
+

@@ -8,50 +8,32 @@ html,
 body {
     width: 100%;
     height: 100%;
-
 }
 
 :root {
-
-    /* background-colors */
-
     --background-color: #000;
     --bg-button-color: #1a1a1a;
     --bg-task-color: #2a2a2a;
-    --bg-delete-color:rgb(196, 50, 50);
-
-    /* color */
-
+    --bg-delete-color: rgb(196, 50, 50);
     --primary-text-color: rgb(253, 247, 247);
 
-
-    /* padding variables */
     --nav-padding: 15px 30px;
     --section-padding: 15px 30px;
+
     --padding-s: 5px;
     --padding-md: 10px;
     --padding-lg: 15px;
     --pading-xl: 20px;
     --pading-xxl: 30px;
 
-    /* 
-border-radius */
-
     --border-radius-sm: 5px;
     --border-radius-s: 10px;
     --border-radius-md: 15px;
     --border-radius-lg: 20px;
-
-
-
-
-
 }
-
 
 body {
     background-color: var(--background-color);
-
     color: var(--primary-text-color);
 }
 
@@ -66,11 +48,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
-.addTask,section .task button {
+.addTask,
+section .task button {
     background-color: var(--bg-button-color);
     color: var(--primary-text-color);
     padding: var(--padding-md) var(--padding-lg);
@@ -78,13 +59,11 @@ nav {
     border: none;
     outline: none;
     border-radius: var(--border-radius-s);
-
 }
 
 section {
     padding: var(--section-padding);
     display: flex;
-
     flex-grow: 1;
     justify-content: space-between;
     gap: 20px;
@@ -93,29 +72,25 @@ section {
 section .task-column {
     display: flex;
     flex-direction: column;
-    gap:var(--padding-md);
+    gap: var(--padding-md);
     background-color: var(--bg-button-color);
     flex-grow: 1;
     padding: var(--padding-md);
     border-radius: var(--border-radius-md);
-    transition: all 0.2s cubic-bezier(0.19,1,0.22,1);
-
+    min-height: 300px;
+    transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-section .task-column.hover-over{
-    border: 2px dashed var(--primary-text-color);
+section .task-column.hover-over {
     scale: 1.02;
-
-
+    border: 2px dashed var(--primary-text-color);
 }
 
 section .task-column .heading {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 section .task-column .task {
@@ -127,12 +102,9 @@ section .task-column .task {
     padding: var(--padding-md);
     border-radius: var(--border-radius-md);
     cursor: grab;
-
 }
 
-section .task-column .task button{
-    align-self:flex-end;
+section .task-column .task button {
+    align-self: flex-end;
     background-color: var(--bg-delete-color);
-   
 }
-

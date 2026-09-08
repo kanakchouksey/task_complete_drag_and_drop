@@ -35,6 +35,7 @@ body {
 body {
     background-color: var(--background-color);
     color: var(--primary-text-color);
+      overflow: hidden;
   
 
 }
@@ -77,6 +78,7 @@ section {
     flex-grow: 1;
     justify-content: space-between;
     gap: 20px;
+     min-height: 0;
 }
 
 section .task-column {
@@ -88,6 +90,8 @@ section .task-column {
     padding: var(--padding-md);
     border-radius: var(--border-radius-md);
     min-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -97,6 +101,8 @@ section .task-column.hover-over {
 }
 
 section .task-column .heading {
+      
+    
     width: 100%;
     display: flex;
     align-items: center;
@@ -162,4 +168,13 @@ justify-content: center;
     border: none;
     width: fit-content;
     align-self: center;
+}
+
+section .task-column::-webkit-scrollbar {
+    width: 5px;
+}
+
+section .task-column::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
 }
